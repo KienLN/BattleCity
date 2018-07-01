@@ -38,7 +38,6 @@ namespace BattleCity
             base.Update(gameTime);
 
             double frameRate = 1.0 / gameTime.ElapsedGameTime.TotalSeconds;
-            TickManager.Get().Update(frameRate);
         }
 
         protected override void Draw(GameTime gameTime)
