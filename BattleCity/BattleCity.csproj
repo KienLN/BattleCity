@@ -7,7 +7,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{5DEE0868-1A56-4801-A4C1-A198BE48D60F}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BattleCity</RootNamespace>
     <AssemblyName>BattleCity</AssemblyName>
@@ -41,10 +41,21 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Game1.cs" />
+    <Compile Include="BattleCity.cs" />
+    <Compile Include="Drawable.cs" />
+    <Compile Include="DrawScene.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="ITickEventHandler.cs" />
+    <Compile Include="ITickObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tank.cs" />
+    <Compile Include="TickEventArgs.cs" />
+    <Compile Include="TickManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

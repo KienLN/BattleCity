@@ -4,14 +4,18 @@ using Microsoft.Xna.Framework.Input;
 
 namespace BattleCity
 {
-    public class Game1 : Game
+    public class BattleCity : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        public Game1()
+        public static double FrameRate { get; private set; } = 0;
+
+        public BattleCity()
         {
             graphics = new GraphicsDeviceManager(this);
+            TargetElapsedTime = System.TimeSpan.FromSeconds(1d / 25d);
+
             Content.RootDirectory = "Content";
         }
 
@@ -24,10 +28,12 @@ namespace BattleCity
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            TickManager.Spawn<Tank>();
         }
 
         protected override void UnloadContent()
         {
+            
 
         }
 
@@ -37,7 +43,8 @@ namespace BattleCity
                 Exit();
             base.Update(gameTime);
 
-            double frameRate = 1.0 / gameTime.ElapsedGameTime.TotalSeconds;
+            FrameRate = 1.0 / gameTime.ElapsedGameTime.TotalSeconds;
+            TickManager.Update();
         }
 
         protected override void Draw(GameTime gameTime)
