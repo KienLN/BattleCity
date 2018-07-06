@@ -45,32 +45,84 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BattleCity.cs" />
-    <Compile Include="Drawable.cs" />
-    <Compile Include="DrawScene.cs" />
-    <Compile Include="Enemy.cs" />
-    <Compile Include="ITickEventHandler.cs" />
-    <Compile Include="ITickObject.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Core\Actor.cs" />
+    <Compile Include="Core\AnimateWorld.cs" />
+    <Compile Include="Core\Application.cs" />
+    <Compile Include="Core\BattleCity.cs" />
+    <Compile Include="Core\HitBox.cs" />
+    <Compile Include="Core\ICollisionHandler.cs" />
+    <Compile Include="Core\ObjectPool.cs" />
+    <Compile Include="Core\WorldSimulator.cs" />
+    <Compile Include="Gameplay\GameObject\Bound.cs" />
+    <Compile Include="Gameplay\GameObject\BrickWall.cs" />
+    <Compile Include="Core\Component.cs" />
+    <Compile Include="Core\Input.cs" />
+    <Compile Include="Core\AnimatedSprite.cs" />
+    <Compile Include="Gameplay\ContentLoader.cs" />
+    <Compile Include="Gameplay\GameObject\Bullet.cs" />
+    <Compile Include="Gameplay\GameObject\Eagle.cs" />
+    <Compile Include="Gameplay\GameObject\Explosion.cs" />
+    <Compile Include="Gameplay\GameObject\Ice.cs" />
+    <Compile Include="Gameplay\GameObject\Spawner.cs" />
+    <Compile Include="Gameplay\GameObject\SteelWall.cs" />
+    <Compile Include="Gameplay\GameObject\Player.cs" />
+    <Compile Include="Gameplay\GameObject\Tree.cs" />
+    <Compile Include="Gameplay\GameObject\Water.cs" />
+    <Compile Include="Gameplay\StartScene.cs" />
+    <Compile Include="Core\Scene.cs" />
+    <Compile Include="Core\Drawable.cs" />
+    <Compile Include="Core\DrawWorld.cs" />
+    <Compile Include="Gameplay\GameObject\Enemy.cs" />
+    <Compile Include="Core\ActorStateChangeEventArgs.cs" />
+    <Compile Include="Core\ITickObject.cs" />
+    <Compile Include="Core\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tank.cs" />
-    <Compile Include="TickEventArgs.cs" />
-    <Compile Include="TickManager.cs" />
+    <Compile Include="Gameplay\GameObject\Tank.cs" />
+    <Compile Include="Core\TickManager.cs" />
+    <Compile Include="Core\Transform.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="MonoGame.Extended, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MonoGame.Extended.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Extended.Graphics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MonoGame.Extended.Graphics.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Extended.Gui, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MonoGame.Extended.Gui.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Extended.Input, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MonoGame.Extended.Input.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Extended.Tiled, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MonoGame.Extended.Tiled.1.1.0\lib\portable-net45+win8+wpa81\MonoGame.Extended.Tiled.dll</HintPath>
+    </Reference>
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\BattleCityAtlas.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.config" />
     <None Include="app.manifest" />
+    <None Include="BattleCityAtlas.atlas" />
+    <None Include="Content\Battle_City.tmx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="VelcroPhysics\VelcroPhysics\VelcroPhysics.MonoGame.csproj">
+      <Project>{1f81406e-264a-433c-b40a-771e9158b6e4}</Project>
+      <Name>VelcroPhysics.MonoGame</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
