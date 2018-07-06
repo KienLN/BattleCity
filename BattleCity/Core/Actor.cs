@@ -23,19 +23,16 @@ namespace BattleCity.Core
         void ITickObject.OnEnable()
         {
             OnStateChange?.Invoke(ActorState.Active);
-            //StateChange?.Invoke(this, new ActorStateChangeEventArgs(ActorStateChangeEventArgs.ActorState.Active));
             OnEnable();
         }
         void ITickObject.OnDisable()
         {
             OnStateChange?.Invoke(ActorState.Inactive);
-            //StateChange?.Invoke(this, new ActorStateChangeEventArgs(ActorStateChangeEventArgs.ActorState.Inactive));
             OnDisable();
         }
         void ITickObject.OnDestroy()
         {
             OnStateChange?.Invoke(ActorState.Destroy);
-            //StateChange?.Invoke(this, new ActorStateChangeEventArgs(ActorStateChangeEventArgs.ActorState.Destroy));
             OnDestroy();
         }
         #endregion
@@ -80,8 +77,6 @@ namespace BattleCity.Core
         }
 
         public delegate void StateChangeDelegate(ActorState actorState);
-        public event StateChangeDelegate OnStateChange;
-
-        //event EventHandler<ActorStateChangeEventArgs> StateChange; // Chạy trước khi OnEnable() và OnDisable() được gọi.
+        public event StateChangeDelegate OnStateChange; // Chạy trước khi OnEnable() và OnDisable() được gọi.
     }
 }

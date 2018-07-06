@@ -13,39 +13,8 @@ namespace BattleCity.Core
         protected virtual void OnAttach() { }
         protected virtual void OnDeattach() { }
 
-        //public void OnActorStateChange(object sender, ActorStateChangeEventArgs args)
-        //{
-        //    switch (args.State)
-        //    {
-        //        case ActorStateChangeEventArgs.ActorState.Active:
-        //            OnEnable();
-        //            break;
-        //        case ActorStateChangeEventArgs.ActorState.Inactive:
-        //            OnDisable();
-        //            break;
-        //        case ActorStateChangeEventArgs.ActorState.Destroy:
-        //            Owner = null;
-        //            break;
-        //        default:
-        //            break;
-        //    }
-        //}
         public void OnActorStateChange(Actor.ActorState actorState)
         {
-            //switch (actorState)
-            //{
-            //    case ActorStateChangeEventArgs.ActorState.Active:
-            //        OnEnable();
-            //        break;
-            //    case ActorStateChangeEventArgs.ActorState.Inactive:
-            //        OnDisable();
-            //        break;
-            //    case ActorStateChangeEventArgs.ActorState.Destroy:
-            //        Owner = null;
-            //        break;
-            //    default:
-            //        break;
-            //}
             switch (actorState)
             {
                 case Actor.ActorState.Active:

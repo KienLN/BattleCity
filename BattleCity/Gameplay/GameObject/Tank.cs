@@ -45,8 +45,8 @@ namespace BattleCity.Gameplay.GameObject
                     if (state == ActorState.Inactive)
                     {
                         var explosion = m_ExplosionPool.GetObject();
-                        explosion.Transform.Position = bullet.Transform.Position;
                         explosion.Active = true;
+                        explosion.Transform.Position = bullet.Transform.Position;
                         m_BulletPool.PutObject(bullet);
                     }
                 };
@@ -92,8 +92,8 @@ namespace BattleCity.Gameplay.GameObject
         protected void Fire()
         {
             var bullet = m_BulletPool.GetObject();
-            Bullet.Fire(bullet, Transform);
             bullet.Active = true;
+            Bullet.Fire(bullet, Transform);
         }
 
         private ObjectPool<Bullet> m_BulletPool;
@@ -101,8 +101,6 @@ namespace BattleCity.Gameplay.GameObject
         protected HitBox m_HitBox;
         protected Drawable m_Drawable;
         protected AnimatedSprite m_Sprite;
-
-
     }
 }
 

@@ -7,7 +7,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{5DEE0868-1A56-4801-A4C1-A198BE48D60F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BattleCity</RootNamespace>
     <AssemblyName>BattleCity</AssemblyName>
@@ -73,7 +73,6 @@
     <Compile Include="Core\Drawable.cs" />
     <Compile Include="Core\DrawWorld.cs" />
     <Compile Include="Gameplay\GameObject\Enemy.cs" />
-    <Compile Include="Core\ActorStateChangeEventArgs.cs" />
     <Compile Include="Core\ITickObject.cs" />
     <Compile Include="Core\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +104,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
+    <Reference Include="VelcroPhysics.MonoGame, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\FarseerPhysicsBin\VelcroPhysics.MonoGame.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\BattleCityAtlas.png" />
@@ -117,12 +120,6 @@
     <None Include="BattleCityAtlas.atlas" />
     <None Include="Content\Battle_City.tmx" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="VelcroPhysics\VelcroPhysics\VelcroPhysics.MonoGame.csproj">
-      <Project>{1f81406e-264a-433c-b40a-771e9158b6e4}</Project>
-      <Name>VelcroPhysics.MonoGame</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

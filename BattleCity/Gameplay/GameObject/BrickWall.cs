@@ -1,4 +1,5 @@
 ﻿using BattleCity.Core;
+using Microsoft.Xna.Framework;
 
 namespace BattleCity.Gameplay.GameObject
 {
@@ -14,7 +15,7 @@ namespace BattleCity.Gameplay.GameObject
 
         public BrickWall()
         {
-            m_HitBox = new HitBox(new Microsoft.Xna.Framework.Vector2(0.5f), true, false);
+            m_HitBox = new HitBox(new Vector2(0.5f), true, false);
             m_HitBox.Owner = this;
         }
 

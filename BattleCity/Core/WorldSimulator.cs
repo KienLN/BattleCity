@@ -47,10 +47,9 @@ namespace BattleCity.Core
 
 
             Locking = true;
-            foreach (var mapItem in m_BodyMap)
+            foreach (var mapItem in m_DynamicBodyMap)
             {
-                if (!mapItem.Key.Static)
-                    mapItem.Key.Owner.Transform.Position = mapItem.Value.Position;
+                mapItem.Key.Owner.Transform.Position = mapItem.Value.Position;
             }
             Locking = false;
 
@@ -125,16 +124,21 @@ namespace BattleCity.Core
             }
 
             m_BodyMap.Add(hitBox, body);
+            if (!hitBox.Static)
+                m_DynamicBodyMap.Add(hitBox, body);
         }
 
         public void Remove(HitBox hitBox)
         {
             m_World.RemoveBody(m_BodyMap[hitBox]);
             m_BodyMap.Remove(hitBox);
+            if (!hitBox.Static)
+                m_DynamicBodyMap.Remove(hitBox);
         }
 
         public bool Locking { get; private set; } = false;
         World m_World = new World(Vector2.Zero);
         Dictionary<HitBox, Body> m_BodyMap = new Dictionary<HitBox, Body>();
+        Dictionary<HitBox, Body> m_DynamicBodyMap = new Dictionary<HitBox, Body>();
     }
 }

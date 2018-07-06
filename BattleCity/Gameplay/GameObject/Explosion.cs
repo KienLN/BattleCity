@@ -15,10 +15,10 @@ namespace BattleCity.Gameplay.GameObject
         {
             m_Sprite = Application.ContentLoader.CreateAnimatedSprite("Explosion1", "Explosion2", "Explosion3");
             m_Sprite.Looped = false;
-            m_Sprite.TimePerFrame = 0.15;
+            m_Sprite.TimePerFrame = 0.04;
             m_Sprite.Owner = this;
 
-            m_HitBox = new HitBox(Vector2.One, false, true);
+            m_HitBox = new HitBox(Vector2.One * 0.75f, false, true);
             m_HitBox.Owner = this;
         }
 
