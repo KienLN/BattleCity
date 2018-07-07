@@ -37,6 +37,8 @@ namespace BattleCity.Core
         }
         #endregion
 
+        public Actor() { }
+
         public bool Active { get { return TickManager.IsActive(this); } set { TickManager.SetActive(this, value); } }
         public static void Destroy(Actor actor) { TickManager.Destroy(actor); }
 
@@ -67,6 +69,7 @@ namespace BattleCity.Core
         }
 
         const string GameObjectNameSpace = "BattleCity.Gameplay.GameObject.";
+
 
         public Transform Transform { get; set; } = new Transform();
 

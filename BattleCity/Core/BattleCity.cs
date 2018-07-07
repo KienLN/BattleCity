@@ -21,6 +21,8 @@ namespace BattleCity.Core
             graphics.PreferredBackBufferWidth = Application.ClientWidth;
             graphics.PreferredBackBufferHeight = Application.ClientHeight;
             //graphics.IsFullScreen = true;
+
+            
         }
 
         protected override void Initialize()
@@ -43,8 +45,7 @@ namespace BattleCity.Core
             Application.ViewportAdapter = viewportAdapter;
             Application.MainCamera = new Camera2D(viewportAdapter);
 
-
-            TickManager.Spawn<StartScene>();
+            TickManager.Spawn<StartScene>(); 
         }
 
         protected override void Draw(GameTime gameTime)

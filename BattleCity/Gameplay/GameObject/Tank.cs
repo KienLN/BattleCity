@@ -21,7 +21,7 @@ namespace BattleCity.Gameplay.GameObject
             m_Sprite = Application.ContentLoader.CreateAnimatedSprite("Player1", "Player2", "Player3");
             m_Sprite.Owner = this;
 
-            m_HitBox = new HitBox(new Vector2(1.75f), false, false);
+             m_HitBox = new HitBox(new Vector2(1.75f), false, false);
             m_HitBox.Owner = this;
 
             m_ExplosionPool = new ObjectPool<Explosion>(() =>

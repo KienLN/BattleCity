@@ -14,6 +14,11 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Battle_City.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:Battle_City.tmx
+
 #begin BattleCityAtlas.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -25,9 +30,4 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:BattleCityAtlas.png
-
-#begin Battle_City.tmx
-/importer:TiledMapImporter
-/processor:TiledMapProcessor
-/build:Battle_City.tmx
 

@@ -110,15 +110,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\BattleCityAtlas.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.config" />
     <None Include="app.manifest" />
-    <None Include="BattleCityAtlas.atlas" />
-    <None Include="Content\Battle_City.tmx" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

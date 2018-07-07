@@ -7,28 +7,10 @@ namespace BattleCity.Gameplay.GameObject
 {
     public class Bullet : Actor, ICollisionHandler
     {
-        //protected override void OnDestroy()
-        //{
-
-        //}
-
-        //protected override void OnDisable()
-        //{
-        //}
-
-        //protected override void OnEnable()
-        //{
-        //}
-
         protected override void OnStart()
         {
             Console.WriteLine("Bullet start.");
         }
-
-        //protected override void OnTick()
-        //{
-
-        //}
 
         //public void Move()
         //{
@@ -83,7 +65,11 @@ namespace BattleCity.Gameplay.GameObject
 
         public void OnColisionEnter(Actor other)
         {
-            if (other.GetType() == typeof(BrickWall))
+            var type = other.GetType();
+            if (type == typeof(Tank) ||
+                type == typeof(BrickWall) ||
+                type == typeof(Bound) ||
+                type == typeof(SteelWall))
             {
                 Active = false;
             }
@@ -95,7 +81,7 @@ namespace BattleCity.Gameplay.GameObject
 
         public Bullet()
         {
-            m_Drawable = Application.ContentLoader.CreateDrawable("Bullet");
+            m_Drawable = Application.ContentLoader.CreateDrawable("Bullet", 5);
             m_Drawable.Owner = this;
 
             m_HitBox = new HitBox(new Vector2(0.25f), false, true);

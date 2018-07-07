@@ -17,10 +17,10 @@ namespace BattleCity.Gameplay
             TickManager.Spawn<AnimateWorld>();
 
 
-            LoadMapFromTileMap();
-
 
             Actor.Spawn("Player", new Vector2(16, 16));
+
+            LoadMapFromTileMap();
 
         }
 
@@ -35,7 +35,7 @@ namespace BattleCity.Gameplay
                     {
                         var x = mapObject.Position.X / 16;
                         var y = Application.ViewportAdapter.VirtualHeight - mapObject.Position.Y / 16;
-                        var position = new Vector2(x, y);
+                        var position = new Vector2(x + 0.25f, y - 0.25f);
 
                         (Actor.Spawn("BrickWall", position) as BrickWall).SetBrickType(BrickWall.Type.TopLeft);
                         (Actor.Spawn("BrickWall", position + Vector2.UnitX * 0.5f) as BrickWall).SetBrickType(BrickWall.Type.TopRight);
@@ -44,12 +44,18 @@ namespace BattleCity.Gameplay
                     }
                     continue;
                 }
+                else
+                {
+                    foreach (var mapObject in objectLayer.Objects)
+                    {
+                        var x = mapObject.Position.X / 16;
+                        var y = Application.ViewportAdapter.VirtualHeight - mapObject.Position.Y / 16;
+                        var position = new Vector2(x + 0.5f * mapObject.Size.Width / 16, y - 0.5f * mapObject.Size.Height / 16);
 
-
-
+                        Actor.Spawn(objectLayer.Name, position);
+                    }
+                }
             }
         }
-
-
     }
 }

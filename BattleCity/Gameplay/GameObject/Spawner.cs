@@ -9,5 +9,8 @@ namespace BattleCity.Gameplay.GameObject
 {
     class Spawner : Actor
     {
+        public Spawner()
+        {
+        }
     }
 }
