@@ -8,12 +8,33 @@ using System.Threading.Tasks;
 
 namespace BattleCity.Gameplay.GameObject
 {
-    class Eagle : Actor
+    class Eagle : Actor, ICollisionHandler
     {
         public Eagle()
         {
-            new HitBox(Vector2.One, true, true).Owner = this;
-            Application.ContentLoader.CreateDrawable("EagleNormal").Owner = this;
+            m_HitBox = new HitBox(Vector2.One, true, true);
+            m_Drawable = Application.ContentLoader.CreateDrawable("EagleNormal");
+            m_HitBox.Owner = this;
+            m_Drawable.Owner = this;
         }
+
+        public void OnColisionEnter(Actor other)
+        {
+            if (other as Bullet != null)
+            {
+                m_Drawable.Owner = null;
+                m_HitBox.Owner = null;
+                m_Drawable = Application.ContentLoader.CreateDrawable("EagleDead");
+                m_Drawable.Owner = this;
+            }
+        }
+
+        public void OnColisionExit(Actor other)
+        {
+            
+        }
+
+        Drawable m_Drawable;
+        HitBox m_HitBox;
     }
 }

@@ -57,8 +57,6 @@ namespace BattleCity.Gameplay.GameObject
 
         void Respawn()
         {
-            Active = false;
-
             m_ShieldSprite.Owner = null;
             m_HitBox.Owner = null;
             if (m_NormalSprite != null) m_NormalSprite.Owner = null;
@@ -76,7 +74,7 @@ namespace BattleCity.Gameplay.GameObject
             m_AppearingSprite.Owner = this;
             Active = true;
 
-
+            Application.Scheduler.RemoveAllByTaskOwner(this);
             Application.Scheduler.Add(() =>
             {
                 m_CanShoot = true;
@@ -147,7 +145,10 @@ namespace BattleCity.Gameplay.GameObject
             {
                 m_HitPoint--;
                 if (m_HitPoint <= 0)
+                {
+                    Active = false;
                     Respawn();
+                }
             }
         }
 
@@ -170,7 +171,7 @@ namespace BattleCity.Gameplay.GameObject
         public Transform RespawnTransform { get; set; }
         private const double APPEAR_TIME = 2;
         private const double SHIELD_DURATION = 3.5;
-        private double m_ShootCooldown = 0.8;
+        private double m_ShootCooldown = 0.6;
     }
 }
 

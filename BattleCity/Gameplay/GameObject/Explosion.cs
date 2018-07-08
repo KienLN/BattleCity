@@ -18,10 +18,10 @@ namespace BattleCity.Gameplay.GameObject
             m_Sprite.TimePerFrame = 0.03;
             m_Sprite.Owner = this;
 
-            m_HitBox = new HitBox(Vector2.One * 0.75f, false, true);
+            m_HitBox = new HitBox(Vector2.One, false, true);
             m_HitBox.Owner = this;
         }
-        
+
         protected override void OnEnable()
         {
             m_Sprite.Reset();

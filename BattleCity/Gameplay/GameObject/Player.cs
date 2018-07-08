@@ -46,7 +46,7 @@ namespace BattleCity.Gameplay.GameObject
             normalSprite = Application.ContentLoader.CreateDrawable("Player1");
             MoveSpeed *= 1.25f;
             bulletSpeed = 25;
-            shootCooldown = 0.4;
+            shootCooldown = 0.2;
             hitPoint = 1;
         }
     }

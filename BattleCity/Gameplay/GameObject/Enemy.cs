@@ -11,8 +11,6 @@ namespace BattleCity.Gameplay.GameObject
     {
         protected override void OnRespawn(ref Drawable normalSprite, ref float bulletSpeed, ref double shootCooldown, ref int hitPoint)
         {
-            ChangeDirTime = 0.4;
-
             int type = rand.Next(1, 5);
             switch (type)
             {
@@ -59,7 +57,7 @@ namespace BattleCity.Gameplay.GameObject
         {
             hitPoint = 1;
             bulletSpeed *= 1.8f;
-            shootCooldown *= 1.5f;
+            shootCooldown *= 0.75f;
 
             switch (rand.Next(1, 3))
             {
@@ -72,7 +70,6 @@ namespace BattleCity.Gameplay.GameObject
                 case 2:
                 {
                     MoveSpeed *= 12;
-                    shootCooldown *= 1.5f;
                     bulletSpeed *= 4.5f;
                     normalSprite = Application.ContentLoader.CreateAnimatedSprite("FastTank", "FastTankRed");
                     break;
@@ -122,7 +119,8 @@ namespace BattleCity.Gameplay.GameObject
             if ((MoveTime += Application.FrameRate) >= ChangeDirTime)
             {
                 MoveTime = 0;
-                ChangeDirTime = rand.NextDouble() * 0.6;
+                if(MoveSpeed > 50) ChangeDirTime = rand.NextDouble() * 0.4;
+                else ChangeDirTime = rand.NextDouble() * 0.9;
                 switch (rand.Next(1, 5))
                 {
                     case 1:
@@ -145,7 +143,8 @@ namespace BattleCity.Gameplay.GameObject
 
         static Random rand = new Random();
 
-        double ChangeDirTime = 0.4f;
+        double ChangeDirTime = 0.5f;
+
         double MoveTime = 0;
     }
 }
