@@ -9,8 +9,9 @@ namespace BattleCity.Gameplay.GameObject
 {
     class Spawner : Actor
     {
-        public Spawner()
+        protected override void OnStart()
         {
+            Spawn<Enemy>(Transform.Position);
         }
     }
 }

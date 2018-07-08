@@ -12,16 +12,17 @@ namespace BattleCity.Gameplay
         {
             Application.Input = TickManager.Spawn<Input>();
             Application.ContentLoader = new ContentLoader();
-            TickManager.Spawn<WorldSimulator>();
-            TickManager.Spawn<DrawWorld>();
-            TickManager.Spawn<AnimateWorld>();
+
+            Application.Scheduler = TickManager.Spawn<Scheduler>();
+            Application.WorldSimulator = TickManager.Spawn<WorldSimulator>();
+            Application.DrawWorld = TickManager.Spawn<DrawWorld>();
+            Application.AnimateWorld = TickManager.Spawn<AnimateWorld>();
 
 
 
-            Actor.Spawn("Player", new Vector2(16, 16));
+            Actor.Spawn("Player", new Vector2(32, 21));
 
             LoadMapFromTileMap();
-
         }
 
 

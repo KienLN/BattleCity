@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace BattleCity.Core
 {
+    // Dùng cho tank, bullet và explosion.
     public class ObjectPool<T> where T : class
     {
         private ConcurrentBag<T> _objects;

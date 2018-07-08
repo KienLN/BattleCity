@@ -7,38 +7,11 @@ namespace BattleCity.Gameplay.GameObject
 {
     public class Bullet : Actor, ICollisionHandler
     {
-        protected override void OnStart()
-        {
-            Console.WriteLine("Bullet start.");
-        }
-
-        //public void Move()
-        //{
-
-        //    switch (Transform.Rotation)
-        //    {
-        //        case 0:
-        //            m_HitBox.Velocity = new Vector2(0, Speed);
-        //            break;
-        //        case 90:
-        //            m_HitBox.Velocity = new Vector2(-Speed, 0);
-        //            break;
-        //        case 270:
-        //            m_HitBox.Velocity = new Vector2(Speed, 0);
-        //            break;
-        //        case 180:
-        //            m_HitBox.Velocity = new Vector2(0, -Speed);
-        //            break;
-        //        default:
-        //            break;
-        //    }
-
-        //}
-
-        public static void Fire(Bullet bullet, Transform transform, float offset = 0.75f)
+        public static void Fire(Bullet bullet, Transform transform, float speed = 25, float offset = 1.25f)
         {
             bullet.Transform.Position = transform.Position;
             bullet.Transform.Rotation = transform.Rotation;
+            bullet.Speed = speed;
             switch ((int)bullet.Transform.Rotation)
             {
                 case 0:
@@ -66,7 +39,9 @@ namespace BattleCity.Gameplay.GameObject
         public void OnColisionEnter(Actor other)
         {
             var type = other.GetType();
-            if (type == typeof(Tank) ||
+            if (type == typeof(Player) ||
+                type == typeof(Enemy) ||
+                type == typeof(Bullet) ||
                 type == typeof(BrickWall) ||
                 type == typeof(Bound) ||
                 type == typeof(SteelWall))
@@ -81,15 +56,12 @@ namespace BattleCity.Gameplay.GameObject
 
         public Bullet()
         {
-            m_Drawable = Application.ContentLoader.CreateDrawable("Bullet", 5);
-            m_Drawable.Owner = this;
-
-            m_HitBox = new HitBox(new Vector2(0.25f), false, true);
+            Application.ContentLoader.CreateDrawable("Bullet", 5).Owner = this;
+            m_HitBox = new HitBox(new Vector2(0.3f), false, true);
             m_HitBox.Owner = this;
         }
 
-        protected Drawable m_Drawable;
         protected HitBox m_HitBox;
-        public float Speed { get; private set; } = 20;
+        float Speed { get; set; }
     }
 }

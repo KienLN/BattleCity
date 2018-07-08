@@ -17,6 +17,11 @@ namespace BattleCity.Core
         public static ContentManager Content { get; set; }
         public static Input Input { get; set; }
 
+        public static Scheduler Scheduler { get; set; }
+        public static DrawWorld DrawWorld { get; set; }
+        public static AnimateWorld AnimateWorld { get; set; }
+        public static WorldSimulator WorldSimulator { get; set; }
+
         public static BoxingViewportAdapter ViewportAdapter { get; set; }
         public static Camera2D MainCamera { get; set; }
 

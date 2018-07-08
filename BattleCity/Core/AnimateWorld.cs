@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BattleCity.Core
 {
-    class AnimateWorld : ITickObject
+    public class AnimateWorld : ITickObject
     {
         #region Emty Implementation
         void ITickObject.OnDestroy()

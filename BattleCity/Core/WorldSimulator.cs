@@ -11,7 +11,7 @@ using VelcroPhysics.Factories;
 
 namespace BattleCity.Core
 {
-    class WorldSimulator : ITickObject
+    public class WorldSimulator : ITickObject
     {
         #region Emty Implementation
         void ITickObject.OnDestroy()
@@ -34,13 +34,6 @@ namespace BattleCity.Core
 
         void ITickObject.OnTick()
         {
-            //foreach (var mapItem in m_BodyMap)
-            //{
-            //    if (!mapItem.Key.Static) mapItem.Value.Position = mapItem.Key.Owner.Transform.Position;
-            //}
-
-
-
             float timeStep = Math.Min((float)Application.FrameRate, 1f / 50f);
             m_World.Step(timeStep);
 
@@ -98,7 +91,7 @@ namespace BattleCity.Core
 
             body.IsSensor = hitBox.Trigger;
             body.FixedRotation = true;
-            body.Restitution = 0.05f;
+            body.Restitution = 0.002f;
             body.Friction = 0;
             body.SleepingAllowed = true;
             body.LinearVelocity = hitBox.StartVelocity;

@@ -8,6 +8,8 @@ namespace BattleCity.Core
 {
     public abstract class Scene : ITickObject
     {
+
+        #region Emty Implementation
         void ITickObject.OnDestroy()
         {
 
@@ -24,15 +26,16 @@ namespace BattleCity.Core
         {
 
         }
-        void ITickObject.OnStart()
-        {
-            OnLoad();
-        }
         void ITickObject.OnTick()
         {
 
         }
+        #endregion
 
+        void ITickObject.OnStart()
+        {
+            OnLoad();
+        }
         protected abstract void OnLoad();
     }
 }
