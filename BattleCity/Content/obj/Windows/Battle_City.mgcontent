@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>D:/DATA/Projects/repos/BattleCity/BattleCity/BattleCity/Content/Battle_City.tmx</SourceFile>
+  <SourceTime>2018-07-08T08:06:28.3810226+07:00</SourceTime>
+  <DestFile>D:/DATA/Projects/repos/BattleCity/BattleCity/BattleCity/Content/bin/Windows/Battle_City.xnb</DestFile>
+  <DestTime>2018-07-08T08:06:39.0210187+07:00</DestTime>
+  <Importer>TiledMapImporter</Importer>
+  <ImporterTime>2018-05-23T11:26:24+07:00</ImporterTime>
+  <Processor>TiledMapProcessor</Processor>
+  <ProcessorTime>2018-05-23T11:26:24+07:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
