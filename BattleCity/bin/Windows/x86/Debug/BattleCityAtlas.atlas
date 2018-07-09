@@ -1,0 +1,321 @@
+
+BattleCityAtlas.png
+size: 512,128
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+ArmorTank
+  rotate: false
+  xy: 274, 88
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+ArmorTankBrown
+  rotate: false
+  xy: 104, 88
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+ArmorTankDarkGreen
+  rotate: false
+  xy: 2, 54
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+ArmorTankHunter
+  rotate: false
+  xy: 36, 20
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+ArmorTankRed
+  rotate: false
+  xy: 240, 54
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+BasicTank
+  rotate: false
+  xy: 172, 54
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+BasicTankRed
+  rotate: false
+  xy: 206, 88
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Bound
+  rotate: false
+  xy: 376, 86
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+BrickWall
+  rotate: false
+  xy: 2, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+BrickWallTopLeft
+  rotate: false
+  xy: 342, 26
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+BrickWallBottomRight
+  rotate: false
+  xy: 342, 26
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+BrickWallTopRight
+  rotate: false
+  xy: 38, 10
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+BrickWallBottomLeft
+  rotate: false
+  xy: 38, 10
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+Bullet
+  rotate: false
+  xy: 360, 44
+  size: 8, 8
+  orig: 8, 8
+  offset: 0, 0
+  index: -1
+EagleDead
+  rotate: false
+  xy: 308, 54
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+EagleNormal
+  rotate: false
+  xy: 240, 20
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Explosion1
+  rotate: false
+  xy: 172, 20
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Explosion2
+  rotate: false
+  xy: 206, 54
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Explosion3
+  rotate: false
+  xy: 274, 20
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+FastTank
+  rotate: false
+  xy: 2, 20
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+FastTankRed
+  rotate: false
+  xy: 70, 54
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Grenade
+  rotate: false
+  xy: 274, 54
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Helmet
+  rotate: false
+  xy: 342, 88
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+IceWall
+  rotate: false
+  xy: 376, 104
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+Life
+  rotate: false
+  xy: 36, 88
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Player1
+  rotate: false
+  xy: 70, 20
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Player2
+  rotate: false
+  xy: 104, 54
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Player3
+  rotate: false
+  xy: 138, 88
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Player4
+  rotate: false
+  xy: 104, 20
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+PowerTank
+  rotate: false
+  xy: 308, 88
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+PowerTankRed
+  rotate: false
+  xy: 342, 54
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Shield1
+  rotate: false
+  xy: 70, 88
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Shield2
+  rotate: false
+  xy: 240, 88
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Shovel
+  rotate: false
+  xy: 2, 88
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Star
+  rotate: false
+  xy: 36, 54
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+SteelWall
+  rotate: false
+  xy: 394, 104
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+Timer
+  rotate: false
+  xy: 206, 20
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Tree
+  rotate: false
+  xy: 342, 36
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+Twinkle1
+  rotate: false
+  xy: 138, 20
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Twinkle2
+  rotate: false
+  xy: 172, 88
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Twinkle6
+  rotate: false
+  xy: 172, 88
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Twinkle4
+  rotate: false
+  xy: 308, 20
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Twinkle5
+  rotate: false
+  xy: 138, 54
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Twinkle3
+  rotate: false
+  xy: 138, 54
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+Water
+  rotate: false
+  xy: 20, 2
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
